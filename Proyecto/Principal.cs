@@ -57,5 +57,13 @@ namespace Proyecto
             this.Show();
         }
         #endregion
+
+        private void pbControl_Click(object sender, EventArgs e)
+        {
+            Control Acción = new Control();
+            Hide();
+            Acción.ShowDialog();
+            Show();
+        }
     }
 }

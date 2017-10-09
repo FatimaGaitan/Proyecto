@@ -129,31 +129,31 @@ namespace Proyecto
         {
 #warning Adaptar a los de Fátima
             Cursor = Cursors.WaitCursor;
-            //DataSet ds = new DataSet();
-            //DataRow dro;
-            //OracleParameter[] parámetros = new OracleParameter[3];
-            //parámetros[0] = new OracleParameter("", txtCorreo.Text);
-            //parámetros[1] = new OracleParameter("", Cifrado.encriptar(txtPass1.Text));
-            //parámetros[2] = new OracleParameter("Cursor_Busqueda", OracleDbType.RefCursor);
-            //ds = procedimientos.Llenar_DataSet("Administrador.Registro.Buscar_Usuario", parámetros, "usuario");
-            //if (ds.Tables["usuario"] != null)
-            //{
-            //    dro = ds.Tables["usuario"].Rows[0];
-            //    if (Cifrado.desencriptar(txtContraseña.Text, dro["Clave"].ToString()))
-            //    {
-            //        this.Cursor = Cursors.Default;
-            //        Globales.Inicializar(dro["Código"].ToString(), dro["Nombre"].ToString(), dro["Tipo de Usuario"].ToString(), dro["Clave"].ToString());
-            Principal Acción = new Principal();
+            DataSet ds = new DataSet();
+            DataRow dro;
+            OracleParameter[] parámetros = new OracleParameter[3];
+            parámetros[0] = new OracleParameter("P_Correo", txtCorreo.Text);
+            parámetros[1] = new OracleParameter("P_Contraseña", Cifrado.encriptar(txtPass1.Text));
+            parámetros[2] = new OracleParameter("CursorDatos", OracleDbType.RefCursor);
+            ds = procedimientos.Llenar_DataSet("Administrador.Registro.Existe_Usuario", parámetros, "Administrador.Usuario");
+            if (ds.Tables["Usuario"] != null)
+            {
+                dro = ds.Tables["Usuario"].Rows[0];
+                if (Cifrado.desencriptar(txtContraseña.Text, dro["Contraseña"].ToString()))
+                {
+                    this.Cursor = Cursors.Default;
+                    Globales.Inicializar(dro["Código"].ToString(), dro["Nombre"].ToString(), dro["Tipo de Usuario"].ToString(), dro["Contraseña"].ToString());
+                    Principal Acción = new Principal();
             this.Hide();
             Acción.ShowDialog();
             this.Show();
             txtContraseña.Text = "";
-            //    }
-            //    else
-            //    {
-            //        errorProvider1.SetError(txtContraseña, "Clave incorrecta");
-            //    }
-            //}
+                }
+                else
+                {
+                    errorProvider1.SetError(txtContraseña, "Clave incorrecta");
+                }
+            }
             Cursor = Cursors.Default;
         }
         private void InicioSesion_FormClosing(object sender, FormClosingEventArgs e)
@@ -209,27 +209,27 @@ namespace Proyecto
                 Validaciones.Contraseñas_Iguales(ref txtPass1, ref txtPass1, ref errorProvider1))
             {
 #warning Adaptar a los procedimientos de Fati
-                string TipoUsuario = "Cliente";
+                int TipoUsuario = 0;
                 if (bttAdministrador.Visible)
-                    TipoUsuario = "Administrador";
+                    TipoUsuario = 1;
                 else if (bttTecnico.Visible)
-                    TipoUsuario = "Tecnico";
-                MessageBox.Show(TipoUsuario);
-                //OracleParameter[] parámetros = new OracleParameter[5];
-                //parámetros[0] = new OracleParameter("", txtNombres.Text);
-                //parámetros[1] = new OracleParameter("", txtApellidos.Text);
-                //parámetros[2] = new OracleParameter("", txtCorreo.Text);
-                //parámetros[3] = new OracleParameter("", Cifrado.encriptar(txtPass1.Text));
-                //parámetros[4] = new OracleParameter("", TipoUsuario);
-                //if (procedimientos.LlenarTabla("packselect.insert_Usuario", parámetros) == 1)
-                //{
-                //    MessageBox.Show("Ocurrió un error al insertar" + Globales.gbError);
-                //}
-                //else
-                //{
-                //    DialogResult = DialogResult.OK;
-                //    this.Close();
-                //}
+                    TipoUsuario = 2;
+                MessageBox.Show(TipoUsuario.ToString());
+                OracleParameter[] parámetros = new OracleParameter[5];
+                parámetros[0] = new OracleParameter("P_Nombre", txtNombres.Text);
+                parámetros[1] = new OracleParameter("P_Apellido", txtApellidos.Text);
+                parámetros[2] = new OracleParameter("P_Correo", txtCorreo.Text);
+                parámetros[3] = new OracleParameter("P_Contraseña", Cifrado.encriptar(txtPass1.Text));
+                parámetros[4] = new OracleParameter("P_Tipo_Usuario", TipoUsuario);
+                if (procedimientos.LlenarTabla("packselect.insert_Usuario", parámetros) == 1)
+                {
+                    MessageBox.Show("Ocurrió un error al insertar" + Globales.gbError);
+                }
+                else
+                {
+                    DialogResult = DialogResult.OK;
+                    this.Close();
+                }
             }
         }
     }

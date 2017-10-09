@@ -68,3 +68,4 @@ C:\Users\Julissa Aguilar\Source\Repos\Proyecto\Proyecto\obj\Debug\Proyecto.cspro
 C:\Users\Julissa Aguilar\Source\Repos\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
 C:\Users\Julissa Aguilar\Source\Repos\Proyecto\Proyecto\obj\Debug\Proyecto.exe
 C:\Users\Julissa Aguilar\Source\Repos\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\Julissa Aguilar\Source\Repos\Proyecto\Proyecto\obj\Debug\Proyecto.Control.resources

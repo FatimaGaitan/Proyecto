@@ -65,20 +65,20 @@ namespace Proyecto
             {
                 string mensaje = (PicNueva.Visible ? "Se añadirá la canción a la base de datos ¿Desea continuar?" : "Se actualizará la canción seleccionada ¿Desea continuar?");
                 string procedimiento = (PicNueva.Visible ? "Administrador.Registro.Insertar" : "Administrador.Registro.Actualizar");
-                if (MessageBox.Show("mensaje", "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Question) == DialogResult.OK)
+                if (MessageBox.Show(mensaje, "Confirmación", MessageBoxButtons.OK, MessageBoxIcon.Question) == DialogResult.OK)
                 {
                     OracleParameter[] Parámetros = new OracleParameter[6];
                     if (!PicNueva.Visible)
                     {
                         Parámetros = new OracleParameter[7];
-                        Parámetros[6] = new OracleParameter("P_Codigo", Globales.gbCodigoCancion);
+                        Parámetros[6] = new OracleParameter("P_Codigo", 10000/*Globales.gbDato.Código1*/);
                     }
-                    Parámetros[0] = new OracleParameter("P_Titulo", txtTítulo.Text);
-                    Parámetros[1] = new OracleParameter("P_Año", txtAño.Text);
-                    Parámetros[2] = new OracleParameter("P_Duracion", txtDuración.Text);
-                    Parámetros[3] = new OracleParameter("P_Album", txtÁlbum.Text);
-                    Parámetros[4] = new OracleParameter("P_Id_Cantante", cbCantante.ValueMember);
-                    Parámetros[5] = new OracleParameter("P_Id_Genero", cbGénero.ValueMember);
+                    Parámetros[0] = new OracleParameter("P_Titulo", "sjdhka"/*txtTítulo.Text*/);
+                    Parámetros[1] = new OracleParameter("P_Año", 2000/*txtAño.Text*/);
+                    Parámetros[2] = new OracleParameter("P_Duracion", "30:59"/*txtDuración.Text*/);
+                    Parámetros[3] = new OracleParameter("P_Album", "ajsjasshd"/*txtÁlbum.Text*/);
+                    Parámetros[4] = new OracleParameter("P_Id_Cantante", 10000/*cbCantante.ValueMember*/);
+                    Parámetros[5] = new OracleParameter("P_Id_Genero", 10000/*cbGénero.ValueMember*/);
                     if (procedimientos.LlenarTabla(procedimiento, Parámetros) == 1)
                     {
                         MessageBox.Show("Ocurrió un error al insertar" + Globales.gbError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -123,7 +123,9 @@ namespace Proyecto
 
         private void Mantenimiento_Load(object sender, EventArgs e)
         {
-            OracleParameter[] parámetros = new OracleParameter[1];
+            try
+            {
+                OracleParameter[] parámetros = new OracleParameter[1];
             //Género
             parámetros[0] = new OracleParameter("CursorDatos", OracleDbType.RefCursor);
             dt = procedimientos.Llenar_DataTable("Administrador.Registro.Mostrar_Generos", parámetros);
@@ -137,7 +139,17 @@ namespace Proyecto
             cbCantante.DisplayMember = "Nombre";
             cbCantante.ValueMember = "Id_Cantante";
             txtTítulo.Focus();
-
+            
+                cbGénero.SelectedIndex = 0;
+                cbCantante.SelectedIndex = 0;
+                txtTítulo.Text = Globales.gbDato.Titulo1;
+                txtAño.Text = Globales.gbDato.Año1.ToString();
+                txtDuración.Text=Globales.gbDato.Duración;
+                txtÁlbum.Text = Globales.gbDato.Album1;
+                cbCantante.SelectedIndex = cbCantante.FindString(Globales.gbDato.Id_Cantante1);
+                cbGénero.SelectedIndex = cbGénero.FindString(Globales.gbDato.Id_Genero1);
+            }
+            catch { }
         }
     }
 }

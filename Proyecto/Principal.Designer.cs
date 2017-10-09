@@ -38,10 +38,12 @@
             this.bttCerrarSesión = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.pbControl = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicConfiguración)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBiblioteca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbControl)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -150,12 +152,24 @@
             this.label4.MouseMove += new System.Windows.Forms.MouseEventHandler(this.txtTítulo_MouseMove);
             this.label4.MouseUp += new System.Windows.Forms.MouseEventHandler(this.txtTítulo_MouseUp);
             // 
+            // pbControl
+            // 
+            this.pbControl.BackColor = System.Drawing.Color.DimGray;
+            this.pbControl.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbControl.Location = new System.Drawing.Point(12, 421);
+            this.pbControl.Name = "pbControl";
+            this.pbControl.Size = new System.Drawing.Size(92, 77);
+            this.pbControl.TabIndex = 65;
+            this.pbControl.TabStop = false;
+            this.pbControl.Click += new System.EventHandler(this.pbControl_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(873, 510);
+            this.Controls.Add(this.pbControl);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.bttCerrarSesión);
             this.Controls.Add(this.panel1);
@@ -171,6 +185,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.PicConfiguración)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBiblioteca)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbControl)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,5 +202,6 @@
         private System.Windows.Forms.Button bttCerrarSesión;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox pbControl;
     }
 }

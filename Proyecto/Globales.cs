@@ -8,8 +8,8 @@ namespace Proyecto
 {
     class Globales
     {
-        public static String gbORacle_Usuario = "system";
-        public static String gbClave_ORacle_Usuario = "Stilinski04";
+        public static String gbORacle_Usuario = "Administrador";
+        public static String gbClave_ORacle_Usuario = "AD123456";
         public static String gbTipo_Usuario = "Administrador";
         public static String gbCodUsuario;
         public static String gbNombre_Usuario;
@@ -18,7 +18,7 @@ namespace Proyecto
         public static String gbServidor = gbIP + ":1521/orcl";
         public static String Cod_Usuario_seleccionado = "";
         public static String gbError;
-        public static String gbCodigoCancion;
+        public static Dato gbDato;
         public Globales()
         {
         }
