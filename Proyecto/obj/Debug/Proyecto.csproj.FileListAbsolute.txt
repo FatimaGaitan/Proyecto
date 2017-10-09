@@ -1,0 +1,51 @@
+C:\Users\FATIMA\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\bin\Debug\Proyecto.exe.config
+C:\Users\FATIMA\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\bin\Debug\Proyecto.exe
+C:\Users\FATIMA\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\bin\Debug\Proyecto.pdb
+C:\Users\FATIMA\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\FATIMA\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\obj\Debug\Proyecto.Properties.Resources.resources
+C:\Users\FATIMA\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.GenerateResource.Cache
+C:\Users\FATIMA\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\obj\Debug\Proyecto.exe
+C:\Users\FATIMA\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\FATIMA\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\obj\Debug\Proyecto.InicioSesion.resources
+C:\Users\FATIMA\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\obj\Debug\Proyecto.Biblioteca.resources
+C:\Users\FATIMA\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\obj\Debug\Proyecto.Principal.resources
+C:\Users\FATIMA\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\obj\Debug\Proyecto.Configuraciones.resources
+C:\Users\Usuario\Downloads\Proyecto\Proyecto\bin\Debug\Proyecto.exe.config
+C:\Users\Usuario\Downloads\Proyecto\Proyecto\obj\Debug\Proyecto.exe
+C:\Users\Usuario\Downloads\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\Julissa Aguilar\Downloads\Proyecto\Proyecto\bin\Debug\Proyecto.exe.config
+C:\Users\Julissa Aguilar\Downloads\Proyecto\Proyecto\bin\Debug\Proyecto.exe
+C:\Users\Julissa Aguilar\Downloads\Proyecto\Proyecto\bin\Debug\Proyecto.pdb
+C:\Users\Julissa Aguilar\Downloads\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\Julissa Aguilar\Downloads\Proyecto\Proyecto\obj\Debug\Proyecto.Biblioteca.resources
+C:\Users\Julissa Aguilar\Downloads\Proyecto\Proyecto\obj\Debug\Proyecto.Configuraciones.resources
+C:\Users\Julissa Aguilar\Downloads\Proyecto\Proyecto\obj\Debug\Proyecto.Mantenimiento.resources
+C:\Users\Julissa Aguilar\Downloads\Proyecto\Proyecto\obj\Debug\Proyecto.Principal.resources
+C:\Users\Julissa Aguilar\Downloads\Proyecto\Proyecto\obj\Debug\Proyecto.InicioSesion.resources
+C:\Users\Julissa Aguilar\Downloads\Proyecto\Proyecto\obj\Debug\Proyecto.Properties.Resources.resources
+C:\Users\Julissa Aguilar\Downloads\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.GenerateResource.Cache
+C:\Users\Julissa Aguilar\Downloads\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\Julissa Aguilar\Downloads\Proyecto\Proyecto\obj\Debug\Proyecto.exe
+C:\Users\Julissa Aguilar\Downloads\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\Julissa Aguilar\Downloads\Proyecto\Proyecto\obj\Debug\Proyecto.Asistente_de_Respaldo.resources
+C:\Users\faty_\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\bin\Debug\Proyecto.exe.config
+C:\Users\faty_\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\obj\Debug\Proyecto.exe
+C:\Users\faty_\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\obj\Debug\Proyecto.pdb
+C:\Users\faty_\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\bin\Debug\Proyecto.exe
+C:\Users\faty_\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\bin\Debug\Proyecto.pdb
+C:\Users\faty_\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\bin\Debug\BCrypt.Net.dll
+C:\Users\faty_\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\bin\Debug\Oracle.DataAccess.dll
+C:\Users\faty_\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\bin\Debug\Oracle.DataAccess.EntityFramework.dll
+C:\Users\faty_\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\faty_\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\bin\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\faty_\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\bin\Debug\BCrypt.Net.pdb
+C:\Users\faty_\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\bin\Debug\BCrypt.Net.xml
+C:\Users\faty_\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\faty_\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\obj\Debug\Proyecto.Asistente_de_Respaldo.resources
+C:\Users\faty_\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\obj\Debug\Proyecto.Biblioteca.resources
+C:\Users\faty_\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\obj\Debug\Proyecto.Configuraciones.resources
+C:\Users\faty_\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\obj\Debug\Proyecto.Mantenimiento.resources
+C:\Users\faty_\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\obj\Debug\Proyecto.Principal.resources
+C:\Users\faty_\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\obj\Debug\Proyecto.InicioSesion.resources
+C:\Users\faty_\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\obj\Debug\Proyecto.Properties.Resources.resources
+C:\Users\faty_\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.GenerateResource.Cache
