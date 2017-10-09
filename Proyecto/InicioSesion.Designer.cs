@@ -47,8 +47,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.bttAtrás2 = new System.Windows.Forms.PictureBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPass2 = new System.Windows.Forms.TextBox();
+            this.txtPass1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.bttCrear = new System.Windows.Forms.Button();
             this.lbApellidos = new System.Windows.Forms.Label();
@@ -200,7 +200,6 @@
             this.txtContraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseña.Location = new System.Drawing.Point(72, 146);
             this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.PasswordChar = '*';
             this.txtContraseña.Size = new System.Drawing.Size(295, 27);
             this.txtContraseña.TabIndex = 24;
             // 
@@ -218,8 +217,8 @@
             this.PnRegistrar.Controls.Add(this.label2);
             this.PnRegistrar.Controls.Add(this.label3);
             this.PnRegistrar.Controls.Add(this.bttAtrás2);
-            this.PnRegistrar.Controls.Add(this.textBox3);
-            this.PnRegistrar.Controls.Add(this.textBox1);
+            this.PnRegistrar.Controls.Add(this.txtPass2);
+            this.PnRegistrar.Controls.Add(this.txtPass1);
             this.PnRegistrar.Controls.Add(this.textBox2);
             this.PnRegistrar.Controls.Add(this.bttCrear);
             this.PnRegistrar.Controls.Add(this.lbApellidos);
@@ -278,21 +277,23 @@
             this.bttAtrás2.TabStop = false;
             this.bttAtrás2.Click += new System.EventHandler(this.bttAtrás2_Click);
             // 
-            // textBox3
+            // txtPass2
             // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(143, 221);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(295, 27);
-            this.textBox3.TabIndex = 33;
+            this.txtPass2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass2.Location = new System.Drawing.Point(143, 221);
+            this.txtPass2.Name = "txtPass2";
+            this.txtPass2.Size = new System.Drawing.Size(295, 27);
+            this.txtPass2.TabIndex = 33;
+            this.txtPass2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPass2_KeyUp);
             // 
-            // textBox1
+            // txtPass1
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(143, 171);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(295, 27);
-            this.textBox1.TabIndex = 32;
+            this.txtPass1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPass1.Location = new System.Drawing.Point(143, 171);
+            this.txtPass1.Name = "txtPass1";
+            this.txtPass1.Size = new System.Drawing.Size(295, 27);
+            this.txtPass1.TabIndex = 32;
+            this.txtPass1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPass1_KeyUp);
             // 
             // textBox2
             // 
@@ -301,6 +302,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(295, 27);
             this.textBox2.TabIndex = 31;
+            this.textBox2.KeyUp += new System.Windows.Forms.KeyEventHandler(this.textBox2_KeyUp);
             // 
             // bttCrear
             // 
@@ -312,6 +314,7 @@
             this.bttCrear.TabIndex = 30;
             this.bttCrear.Text = "Crear";
             this.bttCrear.UseVisualStyleBackColor = false;
+            this.bttCrear.Click += new System.EventHandler(this.bttCrear_Click);
             // 
             // lbApellidos
             // 
@@ -344,6 +347,7 @@
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.Size = new System.Drawing.Size(295, 27);
             this.txtApellidos.TabIndex = 27;
+            this.txtApellidos.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtApellidos_KeyUp);
             // 
             // txtNombres
             // 
@@ -352,6 +356,7 @@
             this.txtNombres.Name = "txtNombres";
             this.txtNombres.Size = new System.Drawing.Size(295, 27);
             this.txtNombres.TabIndex = 26;
+            this.txtNombres.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtNombres_KeyUp);
             // 
             // pictureBox4
             // 
@@ -427,6 +432,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(727, 392);
+            this.Controls.Add(this.PnRegistrar);
             this.Controls.Add(this.PnInicioSesion);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.bttAdministrador);
@@ -438,13 +444,13 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.PnRegistrar);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "InicioSesion";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.InicioSesion_FormClosing);
+            this.Load += new System.EventHandler(this.InicioSesion_Load);
             this.PnInicioSesion.ResumeLayout(false);
             this.PnInicioSesion.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bttAtrás1)).EndInit();
@@ -484,8 +490,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox bttAtrás2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPass2;
+        private System.Windows.Forms.TextBox txtPass1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button bttCrear;
         private System.Windows.Forms.Label lbApellidos;

@@ -13,7 +13,7 @@ namespace Proyecto
     {
         Conexión cn;
         OracleCommand Comando;
-        public int Llenar_Tabla(String procedimiento, OracleParameter[] param)
+        public int LlenarTabla(String procedimiento, OracleParameter[] param)
         {
             int resultado = 0;
             cn = new Conexión();
@@ -64,12 +64,11 @@ namespace Proyecto
             DataTable dt = new DataTable();
             try
             {
-                OracleConnection con = new OracleConnection();
+                OracleConnection con = new OracleConnection(cn.cadena);
                 con.Open();
                 Comando = new OracleCommand();
                 Comando.Connection = con;
                 Comando.CommandText = procedimiento;
-                Comando.CommandType = CommandType.StoredProcedure;
                 for(int x = 0; x < (param.Length); x++)
                 {
                     Comando.Parameters.Add(param[x]).Direction = ParameterDirection.Output;
@@ -86,14 +85,14 @@ namespace Proyecto
             }
             return dt;
         }
-        public DataSet Llenar_DataSer(String procedimiento, OracleParameter[] param, String tabla)
+        public DataSet Llenar_DataSet(String procedimiento, OracleParameter[] param, String tabla)
         {
             cn = new Conexión();
             DataSet ds = new DataSet();
             try
             {
                 OracleConnection con = new OracleConnection(cn.cadena);
-                con.InfoMessage += new OracleInfoMessageEventHandler(con_Message);
+                con.InfoMessage += new OracleInfoMessageEventHandler(con_InfoMessage);
                 con.Open();
                 Comando = new OracleCommand();
                 Comando.Connection = con;
@@ -113,36 +112,7 @@ namespace Proyecto
             }
             return ds;
         }
-        public List<ComboBox_Llenado> LlenarComboBox(String procedimiento, String rows)
-        {
-            cn = new Conexión();
-            List<ComboBox_Llenado> Retornar = new List<ComboBox_Llenado>();
-            try
-            {
-                OracleConnection con = new OracleConnection();
-                con.Open();
-                Comando = new OracleCommand();
-                Comando.CommandType = CommandType.StoredProcedure;
-                OracleDataReader DataReader = Comando.ExecuteReader();
-                string[] row = rows.Split(',');
-                while(DataReader.Read())
-                {
-                    ComboBox_Llenado dato = new ComboBox_Llenado();
-                    dato.Nombre = DataReader[row[0]].ToString();
-                    if(row.Length>1)
-                    {
-                        dato.interes = Convert.ToDouble(DataReader[row[1]]);
-                        Retornar.Add(dato);
-                    }
-                }
-                con.Close();
-            }
-            catch (OracleException ex)
-            {
-                MessageBox.Show(ex.Message, ex.ErrorCode.ToString(), MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            return Retornar;
-        }
+       
         public void con_InfoMessage(object sender, OracleInfoMessageEventArgs e)
         {
             String mensaje = "";
@@ -150,6 +120,7 @@ namespace Proyecto
             {
                 mensaje = e.Errors[0].Message;
             }
+            Globales.gbError = mensaje;
         }
     }
 }

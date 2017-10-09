@@ -14,7 +14,7 @@ namespace Proyecto
 
         public Conexión()
         {
-            cadena = " "; 
+            cadena = "Data Source = " + Globales.gbServidor + ";USER ID=" + Globales.gbORacle_Usuario + ";Password=" + Globales.gbClave_ORacle_Usuario;
         }
     }
 }

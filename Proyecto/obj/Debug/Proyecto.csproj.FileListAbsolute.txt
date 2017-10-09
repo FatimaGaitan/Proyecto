@@ -49,3 +49,22 @@ C:\Users\faty_\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto
 C:\Users\faty_\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\obj\Debug\Proyecto.InicioSesion.resources
 C:\Users\faty_\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\obj\Debug\Proyecto.Properties.Resources.resources
 C:\Users\faty_\Documents\Ciclo 02-2017\Base de Datos II\Segundo Periodo\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.GenerateResource.Cache
+C:\Users\Julissa Aguilar\Source\Repos\Proyecto\Proyecto\bin\Debug\Proyecto.exe.config
+C:\Users\Julissa Aguilar\Source\Repos\Proyecto\Proyecto\bin\Debug\Proyecto.exe
+C:\Users\Julissa Aguilar\Source\Repos\Proyecto\Proyecto\bin\Debug\Proyecto.pdb
+C:\Users\Julissa Aguilar\Source\Repos\Proyecto\Proyecto\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Julissa Aguilar\Source\Repos\Proyecto\Proyecto\bin\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\Julissa Aguilar\Source\Repos\Proyecto\Proyecto\bin\Debug\BCrypt.Net.pdb
+C:\Users\Julissa Aguilar\Source\Repos\Proyecto\Proyecto\bin\Debug\BCrypt.Net.xml
+C:\Users\Julissa Aguilar\Source\Repos\Proyecto\Proyecto\obj\Debug\Proyecto.csprojResolveAssemblyReference.cache
+C:\Users\Julissa Aguilar\Source\Repos\Proyecto\Proyecto\obj\Debug\Proyecto.Asistente_de_Respaldo.resources
+C:\Users\Julissa Aguilar\Source\Repos\Proyecto\Proyecto\obj\Debug\Proyecto.Biblioteca.resources
+C:\Users\Julissa Aguilar\Source\Repos\Proyecto\Proyecto\obj\Debug\Proyecto.Configuraciones.resources
+C:\Users\Julissa Aguilar\Source\Repos\Proyecto\Proyecto\obj\Debug\Proyecto.Mantenimiento.resources
+C:\Users\Julissa Aguilar\Source\Repos\Proyecto\Proyecto\obj\Debug\Proyecto.Principal.resources
+C:\Users\Julissa Aguilar\Source\Repos\Proyecto\Proyecto\obj\Debug\Proyecto.InicioSesion.resources
+C:\Users\Julissa Aguilar\Source\Repos\Proyecto\Proyecto\obj\Debug\Proyecto.Properties.Resources.resources
+C:\Users\Julissa Aguilar\Source\Repos\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.GenerateResource.Cache
+C:\Users\Julissa Aguilar\Source\Repos\Proyecto\Proyecto\obj\Debug\Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\Julissa Aguilar\Source\Repos\Proyecto\Proyecto\obj\Debug\Proyecto.exe
+C:\Users\Julissa Aguilar\Source\Repos\Proyecto\Proyecto\obj\Debug\Proyecto.pdb

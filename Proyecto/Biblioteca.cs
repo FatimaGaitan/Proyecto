@@ -83,5 +83,10 @@ namespace Proyecto
         {
 
         }
+
+        private void PicBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

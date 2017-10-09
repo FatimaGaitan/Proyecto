@@ -28,30 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mantenimiento));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbTitulo = new System.Windows.Forms.Label();
             this.PicNueva = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTítulo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtÁlbum = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.cbGénero = new System.Windows.Forms.ComboBox();
+            this.txtAño = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.bttAtrás = new System.Windows.Forms.PictureBox();
             this.bttAceptar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbCantante = new System.Windows.Forms.ComboBox();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtDuración = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicNueva)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bttAtrás)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -112,13 +115,14 @@
             this.label6.TabIndex = 50;
             this.label6.Text = "Título: ";
             // 
-            // textBox1
+            // txtTítulo
             // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(237, 69);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(404, 27);
-            this.textBox1.TabIndex = 49;
+            this.txtTítulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTítulo.Location = new System.Drawing.Point(237, 69);
+            this.txtTítulo.Name = "txtTítulo";
+            this.txtTítulo.Size = new System.Drawing.Size(404, 27);
+            this.txtTítulo.TabIndex = 0;
+            this.txtTítulo.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtTítulo_KeyUp);
             // 
             // label2
             // 
@@ -144,13 +148,14 @@
             this.label3.TabIndex = 54;
             this.label3.Text = "Álbum: ";
             // 
-            // textBox3
+            // txtÁlbum
             // 
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(120, 206);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(332, 27);
-            this.textBox3.TabIndex = 53;
+            this.txtÁlbum.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtÁlbum.Location = new System.Drawing.Point(120, 206);
+            this.txtÁlbum.Name = "txtÁlbum";
+            this.txtÁlbum.Size = new System.Drawing.Size(332, 27);
+            this.txtÁlbum.TabIndex = 3;
+            this.txtÁlbum.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtÁlbum_KeyUp);
             // 
             // label4
             // 
@@ -164,42 +169,24 @@
             this.label4.TabIndex = 55;
             this.label4.Text = "Género: ";
             // 
-            // comboBox1
+            // cbGénero
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(125, 274);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(189, 29);
-            this.comboBox1.TabIndex = 56;
+            this.cbGénero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbGénero.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbGénero.FormattingEnabled = true;
+            this.cbGénero.Location = new System.Drawing.Point(125, 274);
+            this.cbGénero.Name = "cbGénero";
+            this.cbGénero.Size = new System.Drawing.Size(189, 29);
+            this.cbGénero.TabIndex = 4;
             // 
-            // label5
+            // txtAño
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(172)))), ((int)(((byte)(174)))));
-            this.label5.Location = new System.Drawing.Point(371, 282);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 19);
-            this.label5.TabIndex = 57;
-            this.label5.Text = "Año: ";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(437, 278);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(135, 27);
-            this.textBox4.TabIndex = 58;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(138, 340);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(176, 27);
-            this.textBox5.TabIndex = 60;
+            this.txtAño.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAño.Location = new System.Drawing.Point(138, 340);
+            this.txtAño.Name = "txtAño";
+            this.txtAño.Size = new System.Drawing.Size(176, 27);
+            this.txtAño.TabIndex = 6;
+            this.txtAño.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtAño_KeyUp);
             // 
             // label7
             // 
@@ -233,8 +220,8 @@
             this.bttAceptar.Location = new System.Drawing.Point(443, 361);
             this.bttAceptar.Name = "bttAceptar";
             this.bttAceptar.Size = new System.Drawing.Size(129, 40);
-            this.bttAceptar.TabIndex = 62;
-            this.bttAceptar.Text = "Aceptar";
+            this.bttAceptar.TabIndex = 7;
+            this.bttAceptar.Text = "Insertar";
             this.bttAceptar.UseVisualStyleBackColor = false;
             this.bttAceptar.Click += new System.EventHandler(this.bttAceptar_Click);
             // 
@@ -249,14 +236,44 @@
             this.label1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
             this.label1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseUp);
             // 
-            // comboBox2
+            // cbCantante
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(254, 139);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(387, 29);
-            this.comboBox2.TabIndex = 64;
+            this.cbCantante.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbCantante.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbCantante.FormattingEnabled = true;
+            this.cbCantante.Location = new System.Drawing.Point(254, 139);
+            this.cbCantante.Name = "cbCantante";
+            this.cbCantante.Size = new System.Drawing.Size(387, 29);
+            this.cbCantante.TabIndex = 1;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(172)))), ((int)(((byte)(174)))));
+            this.label5.Location = new System.Drawing.Point(371, 278);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(88, 19);
+            this.label5.TabIndex = 65;
+            this.label5.Text = "Duración: ";
+            // 
+            // txtDuración
+            // 
+            this.txtDuración.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.txtDuración.Location = new System.Drawing.Point(472, 274);
+            this.txtDuración.Mask = "99:99";
+            this.txtDuración.Name = "txtDuración";
+            this.txtDuración.Size = new System.Drawing.Size(100, 27);
+            this.txtDuración.TabIndex = 5;
+            this.txtDuración.Text = "0000";
+            this.txtDuración.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtDuración.ValidatingType = typeof(System.DateTime);
+            this.txtDuración.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtDuración_KeyUp);
             // 
             // Mantenimiento
             // 
@@ -264,21 +281,21 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(682, 445);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.txtDuración);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.cbCantante);
             this.Controls.Add(this.PicNueva);
             this.Controls.Add(this.bttAceptar);
             this.Controls.Add(this.bttAtrás);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtAño);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbGénero);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtÁlbum);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTítulo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbTitulo);
             this.Controls.Add(this.pictureBox2);
@@ -287,10 +304,12 @@
             this.Name = "Mantenimiento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mantenimiento";
+            this.Load += new System.EventHandler(this.Mantenimiento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicNueva)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bttAtrás)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -303,19 +322,20 @@
         private System.Windows.Forms.PictureBox PicNueva;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTítulo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtÁlbum;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.ComboBox cbGénero;
+        private System.Windows.Forms.TextBox txtAño;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox bttAtrás;
         private System.Windows.Forms.Button bttAceptar;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbCantante;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.MaskedTextBox txtDuración;
+        private System.Windows.Forms.Label label5;
     }
 }

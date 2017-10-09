@@ -74,6 +74,7 @@
     <Compile Include="Configuraciones.Designer.cs">
       <DependentUpon>Configuraciones.cs</DependentUpon>
     </Compile>
+    <Compile Include="Globales.cs" />
     <Compile Include="Llenar_ComboBox.cs" />
     <Compile Include="Mantenimiento.cs">
       <SubType>Form</SubType>

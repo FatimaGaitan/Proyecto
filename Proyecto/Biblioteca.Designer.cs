@@ -72,7 +72,7 @@
             this.textBox1.Location = new System.Drawing.Point(283, 69);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(387, 26);
-            this.textBox1.TabIndex = 32;
+            this.textBox1.TabIndex = 0;
             // 
             // dgvBúsqueda
             // 
@@ -89,7 +89,7 @@
             this.dgvBúsqueda.RowHeadersVisible = false;
             this.dgvBúsqueda.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvBúsqueda.Size = new System.Drawing.Size(634, 325);
-            this.dgvBúsqueda.TabIndex = 31;
+            this.dgvBúsqueda.TabIndex = 1;
             // 
             // label2
             // 
@@ -215,6 +215,7 @@
             this.PicBuscar.Size = new System.Drawing.Size(49, 49);
             this.PicBuscar.TabIndex = 34;
             this.PicBuscar.TabStop = false;
+            this.PicBuscar.Click += new System.EventHandler(this.PicBuscar_Click);
             // 
             // bttAtrás
             // 
